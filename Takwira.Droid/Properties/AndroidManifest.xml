@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.Ahmed.Takwira" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="15" />
+	<application android:label="Takwira.Droid">
+
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAteqa62z_mDgHrFgSlWaoy_851lg2Uido" />
+  </application>
+</manifest>

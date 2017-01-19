@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:Takwira.ViewModels;assembly=Takwira"
+             x:Class="Takwira.Views.InscriptionJoueur">
+    <ContentPage.BindingContext>
+        <ViewModels:JoueurViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout Orientation="Vertical"
+                 Spacing="18">
+            <Label Text="Inscription" HorizontalOptions="Center" FontSize="Large"/>
+
+            <Entry Text="{Binding JoueursAdd.Email, Mode==TwoWay} " Placeholder="Email" />
+
+            <Entry  Text="{Binding JoueursAdd.MotDePass, Mode==TwoWay}"  IsPassword="true" Placeholder="MotDePass"/>
+            <Entry  Text="{Binding JoueursAdd.NomEtPrenom, Mode==TwoWay}"   Placeholder="NomEtPrenom"/>
+            <Entry  Text="{Binding JoueursAdd.NumTel, Mode==TwoWay}"  Placeholder="NumTel"/>
+            <Label Text="Date de naissance"/>
+
+            <DatePicker
+            MaximumDate="1/1/2010"
+            MinimumDate="1/1/1900"
+           Date="{Binding JoueursAdd.DateDeNaiss, Mode==TwoWay}"
+            >
+                 </DatePicker>
+
+
+            <Button Text="Post Joueur" 
+                Command="{Binding PostCommand}"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Takwira.Views.Menu">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout Orientation="Vertical">
+                <Button Text="Liste de terrain" Clicked="AllerListTerrainAsync"/>
+
+                <Button Text="Ajouter terrain" Clicked="AllerAjouterTerrain"/>
+                <Button Text="reserver terrain" Clicked="AllerReservation"/>
+                <Button Text="creer matche" Clicked="AllerCreerMatch"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    </MasterDetailPage>
