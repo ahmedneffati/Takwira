@@ -19,8 +19,7 @@
             <Entry  Text="{Binding TerrainsAdd.Latitude, Mode==TwoWay}" Placeholder="Latitude" x:Name="lat"/>
 
 
-            <Entry x:Name="a1"/>
-            <Entry x:Name="a2"/>
+            
             <Button Text="Post Terrain" 
                 Command="{Binding PostCommand}"/>
 

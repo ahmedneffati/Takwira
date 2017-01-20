@@ -7,6 +7,8 @@ using Takwira.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Plugin.ExternalMaps;
+using Plugin.ExternalMaps.Abstractions;
+
 namespace Takwira.Views
 {
     
