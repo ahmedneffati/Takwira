@@ -7,7 +7,7 @@
             <StackLayout Orientation="Vertical">
                 <Button Text="Liste de terrain" Clicked="AllerListTerrainAsync"/>
 
-                <Button Text="Ajouter terrain" Clicked="AllerAjouterTerrain"/>
+                <Button Text="Ajouter terrain" Clicked="AllerAjouterTerrain" />
                 <Button Text="reserver terrain" Clicked="AllerReservation"/>
                 <Button Text="creer matche" Clicked="AllerCreerMatch"/>
             </StackLayout>

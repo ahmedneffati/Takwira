@@ -20,7 +20,9 @@
 
 
             
-            <Button Text="Post Terrain" 
+            <Button Text="Creer Terrain" 
+                    BackgroundColor="Navy"
+                    TextColor="White"
                 Command="{Binding PostCommand}"/>
 
         </StackLayout>

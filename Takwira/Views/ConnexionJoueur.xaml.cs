@@ -27,8 +27,8 @@ namespace Takwira.Views
                     string Url = string.Format("http://takwira.azurewebsites.net/api/Joueurs/Connexion/" + email.Text.ToString() + "/" + pass.Text.ToString());
                     HttpClient client = new HttpClient();
                     string json = await client.GetStringAsync(Url);
-                    Joueur utilisateur = JsonConvert.DeserializeObject<Joueur>(json);
-
+                   // Joueur utilisateur = JsonConvert.DeserializeObject<Joueur>(json);
+                   if(json.Length>20)
 
                     await Navigation.PushAsync(new Menu());
 

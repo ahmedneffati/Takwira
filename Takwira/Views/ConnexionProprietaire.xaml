@@ -17,6 +17,8 @@
                     Clicked="Button_ClickedAsync"
                     />
                 <Button Text="Creer Un compte" 
+                          BackgroundColor="Navy"
+                        TextColor="White"
                     Clicked="Button_ClickedAsync2"
                     />
 

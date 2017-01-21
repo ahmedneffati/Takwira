@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ViewModels="clr-namespace:Takwira.ViewModels;assembly=Takwira"
-             x:Class="Takwira.Views.InscriptionJoueur">
+             x:Class="Takwira.Views.InscriptionJoueur"
+             Title="Inscription"
+             >
     <ContentPage.BindingContext>
         <ViewModels:JoueurViewModel/>
     </ContentPage.BindingContext>
@@ -27,6 +29,8 @@
 
 
             <Button Text="Post Joueur" 
+                      BackgroundColor="Gray"
+                    TextColor="White"
                 Command="{Binding PostCommand}"/>
 
         </StackLayout>

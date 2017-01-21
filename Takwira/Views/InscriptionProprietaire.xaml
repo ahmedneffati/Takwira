@@ -27,6 +27,8 @@
 
 
             <Button Text="Post Joueur" 
+                      BackgroundColor="Gray"
+                    TextColor="White"
                 Command="{Binding PostCommand}"/>
 
         </StackLayout>

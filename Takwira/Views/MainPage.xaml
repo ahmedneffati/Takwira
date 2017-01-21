@@ -9,7 +9,7 @@
     <maps:Map/>
     <ScrollView>
         <StackLayout Orientation="Vertical"
-                  
+                 
                      
                  >
             <StackLayout HorizontalOptions="CenterAndExpand"
@@ -18,9 +18,13 @@
                 
                 <Button Text="Proprietaire de terrain" 
                     Clicked="Button_ClickedAsync"
+                        BackgroundColor="Navy"
+                        TextColor="White"
                          WidthRequest="200"
                     />
                 <Button Text="Joueur de Foot" 
+                        BackgroundColor="Navy"
+                        TextColor="White"
                     Clicked="Button_ClickedAsync2"
                          WidthRequest="200"
                     />

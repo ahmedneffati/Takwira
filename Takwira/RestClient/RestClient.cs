@@ -7,6 +7,10 @@ using Newtonsoft.Json;
 
 namespace Takwira.RestClient
 {
+    /// <summary>
+    /// RestClient implements methods for calling CRUD operations
+    /// using HTTP.
+    /// </summary>
     public class RestClient<T>
     {
         private string WebServiceUrl { get; set; }
