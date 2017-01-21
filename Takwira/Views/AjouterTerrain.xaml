@@ -2,26 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:ViewModels="clr-namespace:Takwira.ViewModels;assembly=Takwira"
-             x:Class="Takwira.Views.AjouterTerrain">
+             x:Class="Takwira.Views.AjouterTerrain"
+             Title="Add soccer field"
+             >
     <ContentPage.BindingContext>
         <ViewModels:TerrainViewModel/>
     </ContentPage.BindingContext>
     <ScrollView>
         <StackLayout Orientation="Vertical"
-                 Spacing="18">
-            <Entry Text="{Binding TerrainsAdd.Nom, Mode==TwoWay} " Placeholder="Nom terrain" />
+                 Spacing="18"
+                     Margin="20"
+                     >
+            <Entry Text="{Binding TerrainsAdd.Nom, Mode==TwoWay} " Placeholder="Name of soccer field" />
 
-            <Entry  Text="{Binding TerrainsAdd.Description, Mode==TwoWay}" Placeholder="Description"/>
+            <Entry   Text="{Binding TerrainsAdd.Description, Mode==TwoWay}" Placeholder="Description"/>
+
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+            <Button Text="Get Position from Maps" 
+                    BackgroundColor="Gray"
+                    
+                    
+                    TextColor="White"
+                x:Name="pos1"/>
+            <Button Text="Get Position from GPS" 
+                    BackgroundColor="Gray"
+                
+                    
+                    TextColor="White"
+                x:Name="pos" />
+            </StackLayout>
+            <Entry IsVisible="False" Text="{Binding TerrainsAdd.Longitude, Mode==TwoWay} " Placeholder="Longitude" x:Name="lon" />
+
+            <Entry  IsVisible="False" Text="{Binding TerrainsAdd.Latitude, Mode==TwoWay}" Placeholder="Latitude" x:Name="lat"/>
 
 
-            <Entry Text="{Binding TerrainsAdd.Longitude, Mode==TwoWay} " Placeholder="Longitude" x:Name="lon" />
+      
+            <Label Text=""/>
 
-            <Entry  Text="{Binding TerrainsAdd.Latitude, Mode==TwoWay}" Placeholder="Latitude" x:Name="lat"/>
-
-
-            
-            <Button Text="Creer Terrain" 
-                    BackgroundColor="Navy"
+            <Label Text=""/>
+            <Label Text=""/>
+            <Button Text="Add soccer field" 
+                    BackgroundColor="#013ADF"
                     TextColor="White"
                 Command="{Binding PostCommand}"/>
 

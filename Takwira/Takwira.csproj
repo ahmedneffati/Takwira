@@ -66,6 +66,12 @@
     <Compile Include="Views\CreerReservation.xaml.cs">
       <DependentUpon>CreerReservation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\detailTerrain.xaml.cs">
+      <DependentUpon>detailTerrain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InformationTerrain.xaml.cs">
+      <DependentUpon>InformationTerrain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\InscriptionJoueur.xaml.cs">
       <DependentUpon>InscriptionJoueur.xaml</DependentUpon>
     </Compile>
@@ -236,7 +242,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
+    <EmbeddedResource Include="Views\InformationTerrain.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Football.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\detailTerrain.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

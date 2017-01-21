@@ -15,6 +15,7 @@ namespace Takwira.Views
         {
             InitializeComponent();
             positionAsync();
+       
 
         }
         public async Task positionAsync()

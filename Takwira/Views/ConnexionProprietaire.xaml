@@ -5,6 +5,7 @@
     <ScrollView>
         <StackLayout Orientation="Vertical"
                   
+              
                      
                  >
             <StackLayout HorizontalOptions="CenterAndExpand"
@@ -14,11 +15,12 @@
 
                 <Entry  x:Name="pass" Placeholder="Mot de passe" IsPassword="True" WidthRequest="200"/>
                 <Button Text="Connecter" 
+                        BackgroundColor="#013ADF"
+                        TextColor="White"
                     Clicked="Button_ClickedAsync"
                     />
                 <Button Text="Creer Un compte" 
-                          BackgroundColor="Navy"
-                        TextColor="White"
+                          
                     Clicked="Button_ClickedAsync2"
                     />
 

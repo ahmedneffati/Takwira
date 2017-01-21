@@ -13,7 +13,7 @@ namespace Takwira
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage (new Takwira.Views.MainPage());
+            MainPage =new Takwira.Views.Menu();
         }
 
         protected override void OnStart()

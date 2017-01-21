@@ -48,18 +48,16 @@ namespace Takwira.Views
 
         }
         private Pin s;
-        private void Pin_Clicked(object sender, System.EventArgs e)
+        private async void Pin_Clicked(object sender, System.EventArgs e)
         {
             s = sender as Pin;
+           await Navigation.PushAsync(new detailTerrain(s));
             //  place.BindingContext = fvm.FoursquareVenues.Response.Groups[0].Items.Find(item => item.Venue.Name == s?.Label);
             // DisplayAlert(s?.Label, s.Address, "OK");
 
         }
 
-        private void Button_Clicked(object sender, System.EventArgs e)
-        {
-            CrossExternalMaps.Current.NavigateTo(s.Label, s.Position.Latitude, s.Position.Longitude, NavigationType.Driving);
-        }
+       
     }
 }
 

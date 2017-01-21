@@ -10,15 +10,17 @@
     </ContentPage.BindingContext>
     <ScrollView>
         <StackLayout Orientation="Vertical"
-                 Spacing="18">
-            <Label Text="Inscription" HorizontalOptions="Center" FontSize="Large"/>
+                 Spacing="18"
+                    Margin="20"
+                     >
+            <Label Text="Inscription" TextColor= "Black" HorizontalOptions="Center" FontSize="Large"/>
 
-            <Entry Text="{Binding JoueursAdd.Email, Mode==TwoWay} " Placeholder="Email" />
+            <Entry Text="{Binding JoueursAdd.Email, Mode==TwoWay} " Placeholder="e-mail" />
 
-            <Entry  Text="{Binding JoueursAdd.MotDePass, Mode==TwoWay}"  IsPassword="true" Placeholder="MotDePass"/>
-            <Entry  Text="{Binding JoueursAdd.NomEtPrenom, Mode==TwoWay}"   Placeholder="NomEtPrenom"/>
-            <Entry  Text="{Binding JoueursAdd.NumTel, Mode==TwoWay}"  Placeholder="NumTel"/>
-            <Label Text="Date de naissance"/>
+            <Entry  Text="{Binding JoueursAdd.MotDePass, Mode==TwoWay}"  IsPassword="true" Placeholder="Password"/>
+            <Entry  Text="{Binding JoueursAdd.NomEtPrenom, Mode==TwoWay}"   Placeholder="Full Name"/>
+            <Entry  Text="{Binding JoueursAdd.NumTel, Mode==TwoWay}"  Placeholder="Phone Number"/>
+            <Label Text="Birth date"/>
 
             <DatePicker
             MaximumDate="1/1/2010"
@@ -28,9 +30,10 @@
                  </DatePicker>
 
 
-            <Button Text="Post Joueur" 
-                      BackgroundColor="Gray"
+            <Button Text="Create" 
+                      BackgroundColor="#013ADF"
                     TextColor="White"
+                    
                 Command="{Binding PostCommand}"/>
 
         </StackLayout>

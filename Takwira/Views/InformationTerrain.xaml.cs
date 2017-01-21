@@ -8,12 +8,11 @@ using Xamarin.Forms;
 
 namespace Takwira.Views
 {
-    public partial class InscriptionProprietaire : ContentPage
+    public partial class InformationTerrain : ContentPage
     {
-        public InscriptionProprietaire()
+        public InformationTerrain()
         {
             InitializeComponent();
-            
         }
     }
 }

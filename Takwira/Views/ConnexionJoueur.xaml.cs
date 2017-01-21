@@ -15,7 +15,8 @@ namespace Takwira.Views
         public ConnexionJoueur()
         {
             InitializeComponent();
-        }
+           
+            }
 
         private async void Button_ClickedAsync(object sender, EventArgs e)
         {
@@ -23,6 +24,7 @@ namespace Takwira.Views
 
                 try
                 {
+                    
                     //http://takwira.azurewebsites.net/api/Joueurs/Connexion/azdadz/huuih
                     string Url = string.Format("http://takwira.azurewebsites.net/api/Joueurs/Connexion/" + email.Text.ToString() + "/" + pass.Text.ToString());
                     HttpClient client = new HttpClient();
@@ -44,11 +46,15 @@ namespace Takwira.Views
 
             }
         }
-      
+
         private async void Button_ClickedAsync2(object sender, EventArgs e)
         {
+
            
-             await Navigation.PushAsync(new InscriptionJoueur());
+                 await Navigation.PushAsync(new InscriptionJoueur());
+        
+            
+           
         }
     }
 }

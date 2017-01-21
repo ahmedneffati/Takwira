@@ -8,22 +8,23 @@
 
     <maps:Map/>
     <ScrollView>
-        <StackLayout Orientation="Vertical"
+        <StackLayout Orientation="Vertical">
+            <Label Text="Welcome to Takwira" FontSize="28" Margin="20"/>
                  
-                     
-                 >
             <StackLayout HorizontalOptions="CenterAndExpand"
                          VerticalOptions="CenterAndExpand" WidthRequest="200">
 
-                
+
+                <Image Source="Images/Football.png" />
+
                 <Button Text="Proprietaire de terrain" 
                     Clicked="Button_ClickedAsync"
-                        BackgroundColor="Navy"
+                        BackgroundColor="#013ADF"
                         TextColor="White"
                          WidthRequest="200"
                     />
                 <Button Text="Joueur de Foot" 
-                        BackgroundColor="Navy"
+                        BackgroundColor="#013ADF"
                         TextColor="White"
                     Clicked="Button_ClickedAsync2"
                          WidthRequest="200"

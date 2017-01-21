@@ -4,19 +4,43 @@
              x:Class="Takwira.Views.CreerMatch">
     <ScrollView>
         <StackLayout Orientation="Vertical"
-                 Spacing="18">
+                 Spacing="18"
+                 Margin="20"
+                     >
 
-
+            <Entry  Placeholder="Number of player" />
+            <Label Text="date"/>
+            <DatePicker
+            MaximumDate="1/1/2010"
+            MinimumDate="1/1/1900"
+           
+            >
+                 </DatePicker>
+            <Label Text="Time"/>
+            <TimePicker/>
+            
             <Entry  Placeholder="Description" />
+            
 
-            <Entry    Placeholder="Longitude" x:Name="lo"/>
-            <Entry     Placeholder="Latitude" x:Name="la"/>
+            <Entry   IsVisible="False" Placeholder="Longitude" x:Name="lo"/>
+            <Entry   IsVisible="False"  Placeholder="Latitude" x:Name="la"/>
+            <Button Text="Get Position from Maps" 
+                    BackgroundColor="Gray"
+                    
+                    
+                    TextColor="White"
+                x:Name="pos1"/>
+            <Button Text="Get Position from GPS" 
+                    BackgroundColor="Gray"
+                
+                    
+                    TextColor="White"
+                x:Name="pos" />
 
 
-
-            <Button Text="Creer Match" 
+            <Button Text="Create Match" 
                TextColor="White"
-                    BackgroundColor="Navy"/>
+                    BackgroundColor="#013ADF"/>
 
         </StackLayout>
     </ScrollView>

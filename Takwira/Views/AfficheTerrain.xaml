@@ -2,14 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=xamarin.Forms.Maps"
-             x:Class="Takwira.Views.AfficheTerrain">
+             x:Class="Takwira.Views.AfficheTerrain"
+             Title="soccer field"
+             >
+    
     <ScrollView>
         <StackLayout Orientation="Vertical">
-            <Button Text="get directions"
-                    BackgroundColor="Navy"
-                    TextColor="White"
-                    Clicked="Button_Clicked"
-                    />
+           
             <maps:Map x:Name="map1"/>
         </StackLayout>
     </ScrollView>
