@@ -172,6 +172,18 @@
       <Name>Takwira</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background.jpg" />
+    <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\drawable\add_btn.png" />
+    <Content Include="Resources\drawable\Football.png" />
+    <AndroidResource Include="Resources\drawable\icsms.png" />
+    <AndroidResource Include="Resources\drawable\icemail.png" />
+    <AndroidResource Include="Resources\drawable\icphone.png" />
+    <AndroidResource Include="Resources\drawable\ic_email_3x.png" />
+    <AndroidResource Include="Resources\drawable\ic_phone_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_textsms_black_24dp_2x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

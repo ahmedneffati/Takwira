@@ -108,6 +108,16 @@
     <None Include="Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add.png" />
+    <Content Include="add_btn.png" />
+    <Content Include="background.jpg" />
+    <Content Include="Football.png" />
+    <Content Include="icemail.png" />
+    <Content Include="icphone.png" />
+    <Content Include="icsms.png" />
+    <Content Include="ic_email_3x.png" />
+    <AndroidResource Include="ic_phone_black_24dp.png" />
+    <Content Include="ic_textsms_black_24dp_2x.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />

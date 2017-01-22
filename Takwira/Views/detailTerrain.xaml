@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Takwira.Views.detailTerrain">
+             x:Class="Takwira.Views.detailTerrain"
+          
+             >
     <ScrollView>
-        <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Vertical"
+                     >
             <StackLayout Orientation="Horizontal">
                 <Label Text="Name of soccer field" FontSize="Large"/>
                 <Label Text="aaaaaaaaaaaa"  FontSize="Medium"/>
@@ -26,9 +29,17 @@
                     TextColor="White"
                     Clicked="Button_Clicked"
                     />
-            <Image Source="Images\Football.png"
+            <Image Source="p.jpg"
              HorizontalOptions="CenterAndExpand"
              VerticalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Padding="20" Margin="20">
+                <Image Source="ic_textsms_black_24dp_2x.png" WidthRequest="70" HeightRequest="70"/>
+                <Image Source="ic_phone_black_24dp.png" WidthRequest="70" HeightRequest="70"/>
+                <Image Source="ic_email_3x.png" WidthRequest="70" HeightRequest="70"/>
+            </StackLayout>
         </StackLayout>
   
     </ScrollView>
