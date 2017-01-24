@@ -39,6 +39,10 @@ namespace Takwira.Views
         {
             Detail = new NavigationPage(new CreerMatch());
         }
+        public void AllerConnexion(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new ConnexionJoueur());
+        }
 
 
     }

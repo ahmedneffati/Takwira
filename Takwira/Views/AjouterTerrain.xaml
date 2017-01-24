@@ -1,23 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:ViewModels="clr-namespace:Takwira.ViewModels;assembly=Takwira"
+           
              x:Class="Takwira.Views.AjouterTerrain"
              Title="Add soccer field"
              >
-    <ContentPage.BindingContext>
-        <ViewModels:TerrainViewModel/>
-    </ContentPage.BindingContext>
+   
     <ScrollView>
         <StackLayout Orientation="Vertical"
-                 Spacing="18"
-                     Margin="20"
+                Padding="20"
+                  HorizontalOptions="Center"
+                     VerticalOptions="Center"
                      >
-            <Entry Text="{Binding TerrainsAdd.Nom, Mode==TwoWay} " Placeholder="Name of soccer field" />
+            <Entry Text="" Placeholder="Name of soccer field" x:Name="nom" />
 
-            <Entry   Text="{Binding TerrainsAdd.Description, Mode==TwoWay}" Placeholder="Description"/>
+            <Entry   Text="" Placeholder="Description" x:Name="desc"/>
 
-            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+            <StackLayout 
+                         HorizontalOptions="Center"
+                         >
             <Button Text="Get Position from Maps" 
                     BackgroundColor="Gray"
                     
@@ -30,21 +31,31 @@
                     
                     TextColor="White"
                 x:Name="pos" />
-            </StackLayout>
-            <Entry IsVisible="False" Text="{Binding TerrainsAdd.Longitude, Mode==TwoWay} " Placeholder="Longitude" x:Name="lon" />
 
-            <Entry  IsVisible="False" Text="{Binding TerrainsAdd.Latitude, Mode==TwoWay}" Placeholder="Latitude" x:Name="lat"/>
-
-
-      
-            <Label Text=""/>
-
-            <Label Text=""/>
-            <Label Text=""/>
-            <Button Text="Add soccer field" 
+                <Image Source="add_btn.png"
+                       x:Name="x"
+                       WidthRequest="400"
+                       HeightRequest="220"
+                       >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_Tapped"
+                            NumberOfTapsRequired="1"
+                            />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button Text="Add soccer field" 
                     BackgroundColor="#013ADF"
                     TextColor="White"
-                Command="{Binding PostCommand}"/>
+                 Clicked="InsertFile"/>
+            </StackLayout>
+            <Entry IsVisible="False" Placeholder="Longitude" x:Name="lon" />
+
+            <Entry  IsVisible="False" Placeholder="Latitude" x:Name="lat"/>
+
+            
+
+
 
         </StackLayout>
     </ScrollView>

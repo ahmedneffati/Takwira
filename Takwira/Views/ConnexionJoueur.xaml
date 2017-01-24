@@ -16,7 +16,7 @@
                          VerticalOptions="CenterAndExpand" WidthRequest="200"
                              Margin="30"
                              >
-                <Label Text="Welcome to Takwira" FontSize="Large" TextColor="Black"/>
+                <Label Text="Welcome to Find Match" FontSize="Large" TextColor="Black"/>
 
                 <Entry x:Name="email" Placeholder="e_mail" WidthRequest="200" />
 

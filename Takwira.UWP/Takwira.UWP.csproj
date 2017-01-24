@@ -110,7 +110,7 @@
   <ItemGroup>
     <Content Include="add.png" />
     <Content Include="add_btn.png" />
-    <Content Include="background.jpg" />
+    <Content Include="background.png" />
     <Content Include="Football.png" />
     <Content Include="icemail.png" />
     <Content Include="icphone.png" />

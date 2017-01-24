@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Takwira.Views.CreerMatch">
+             x:Class="Takwira.Views.CreerMatch"
+             Title="Create Match"
+             
+             >
     <ScrollView>
         <StackLayout Orientation="Vertical"
-                 Spacing="18"
-                 Margin="20"
+                 Padding="20"
+                  HorizontalOptions="Center"
+                     VerticalOptions="Center"
                      >
 
             <Entry  Placeholder="Number of player" />

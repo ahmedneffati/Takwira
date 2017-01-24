@@ -13,7 +13,7 @@
                  Spacing="18"
                     Margin="20"
                      >
-            <Label Text="Inscription" TextColor= "Black" HorizontalOptions="Center" FontSize="Large"/>
+          
 
             <Entry Text="{Binding JoueursAdd.Email, Mode==TwoWay} " Placeholder="e-mail" />
 
@@ -28,7 +28,7 @@
            Date="{Binding JoueursAdd.DateDeNaiss, Mode==TwoWay}"
             >
                  </DatePicker>
-
+            <Image Source="add_btn.png"/>
 
             <Button Text="Create" 
                       BackgroundColor="#013ADF"

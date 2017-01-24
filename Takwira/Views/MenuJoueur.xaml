@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Takwira.Views.Menu">
+             x:Class="Takwira.Views.MenuJoueur">
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
             <StackLayout Orientation="Vertical">
@@ -11,9 +11,9 @@
                 <Button Text="Add soccer field" Clicked="AllerAjouterTerrain" />
                 <Button Text="reserver soccer field" Clicked="AllerReservation"/>
                 <Button Text="Create match" Clicked="AllerCreerMatch"/>
-                <Button Text="Log Out" Clicked="AllerConnexion"/>
+                <Button Text="Log Out" Clicked="AllerCreerMatch"/>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
 
-    </MasterDetailPage>
+</MasterDetailPage>
