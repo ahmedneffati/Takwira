@@ -1,13 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ViewModels="clr-namespace:Takwira.ViewModels;assembly=Takwira"
+
              x:Class="Takwira.Views.InscriptionJoueur"
              Title="Inscription"
              >
-    <ContentPage.BindingContext>
-        <ViewModels:JoueurViewModel/>
-    </ContentPage.BindingContext>
+  
     <ScrollView>
         <StackLayout Orientation="Vertical"
                  Spacing="18"
@@ -15,26 +13,28 @@
                      >
           
 
-            <Entry Text="{Binding JoueursAdd.Email, Mode==TwoWay} " Placeholder="e-mail" />
+            <Entry  Placeholder="e-mail" x:Name="email"/>
 
-            <Entry  Text="{Binding JoueursAdd.MotDePass, Mode==TwoWay}"  IsPassword="true" Placeholder="Password"/>
-            <Entry  Text="{Binding JoueursAdd.NomEtPrenom, Mode==TwoWay}"   Placeholder="Full Name"/>
-            <Entry  Text="{Binding JoueursAdd.NumTel, Mode==TwoWay}"  Placeholder="Phone Number"/>
+            <Entry   IsPassword="true" Placeholder="Password" x:Name="pass"/>
+            <Entry    Placeholder="Full Name" x:Name="full"/>
+            <Entry    Placeholder="Phone Number" x:Name="phoneN"/>
             <Label Text="Birth date"/>
 
             <DatePicker
-            MaximumDate="1/1/2010"
+                x:Name="dateN"
+            MaximumDate="1/1/2015"
             MinimumDate="1/1/1900"
-           Date="{Binding JoueursAdd.DateDeNaiss, Mode==TwoWay}"
             >
                  </DatePicker>
-            <Image Source="add_btn.png"/>
+           
 
             <Button Text="Create" 
+                    x:Name="creer"
                       BackgroundColor="#013ADF"
                     TextColor="White"
+                    Clicked="creer_Clicked"
                     
-                Command="{Binding PostCommand}"/>
+                />
 
         </StackLayout>
     </ScrollView>

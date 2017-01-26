@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Takwira.Views;
 using Xamarin.Forms;
 
 namespace Takwira
@@ -13,7 +13,9 @@ namespace Takwira
         {
             InitializeComponent();
 
-            MainPage =new Takwira.Views.Menu();
+            MainPage = new NavigationPage(new CreerReservation());
+
+           // MainPage =new Takwira.Views.Menu();
         }
 
         protected override void OnStart()

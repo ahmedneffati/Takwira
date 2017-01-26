@@ -123,8 +123,9 @@ namespace Takwira.Views
             t.PathImage= "http://takwira.azurewebsites.net/uploads/image_" + name + ".jpg";
 
             await u.PostTerrainsAsync(t);
+            //https://takwira.scm.azurewebsites.net/DebugConsole   bech inverifi
 
         }
 
-        }
+    }
 }

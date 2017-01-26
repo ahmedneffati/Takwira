@@ -19,7 +19,7 @@
             <StackLayout 
                          HorizontalOptions="Center"
                          >
-            <Button Text="Get Position from Maps" 
+        <!--<Button Text="Get Position from Maps" 
                     BackgroundColor="Gray"
                     
                     
@@ -32,6 +32,7 @@
                     TextColor="White"
                 x:Name="pos" />
 
+                -->
                 <Image Source="add_btn.png"
                        x:Name="x"
                        WidthRequest="400"

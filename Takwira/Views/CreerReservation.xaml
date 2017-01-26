@@ -2,4 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Takwira.Views.CreerReservation">
+    <StackLayout
+       Orientation="Vertical"
+       HorizontalOptions="Center"
+                     VerticalOptions="Center">
+    <DatePicker x:Name="date" DateSelected="date_DateSelected"/>
+        <Picker x:Name="picker" Title="Temps libre" VerticalOptions="CenterAndExpand" />
+        <Button Clicked="Button_Clicked" Text="confirm"/>
+
+    </StackLayout>
 </ContentPage>

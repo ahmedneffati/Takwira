@@ -12,38 +12,29 @@
                      VerticalOptions="Center"
                      >
 
-            <Entry  Placeholder="Number of player" />
+            <Entry  Placeholder="Number of player" x:Name="nb" Text=""/>
             <Label Text="date"/>
             <DatePicker
-            MaximumDate="1/1/2010"
-            MinimumDate="1/1/1900"
+                x:Name="date"
+           
            
             >
                  </DatePicker>
-            <Label Text="Time"/>
-            <TimePicker/>
+            <Label Text="Time" />
             
-            <Entry  Placeholder="Description" />
+            <TimePicker x:Name="time"/>
+            
+            <Entry  Placeholder="Description" x:Name="desc" Text=""/>
             
 
-            <Entry   IsVisible="False" Placeholder="Longitude" x:Name="lo"/>
-            <Entry   IsVisible="False"  Placeholder="Latitude" x:Name="la"/>
-            <Button Text="Get Position from Maps" 
-                    BackgroundColor="Gray"
-                    
-                    
-                    TextColor="White"
-                x:Name="pos1"/>
-            <Button Text="Get Position from GPS" 
-                    BackgroundColor="Gray"
-                
-                    
-                    TextColor="White"
-                x:Name="pos" />
+            <Entry   IsVisible="False" Placeholder="Longitude" Text="" x:Name="lo"/>
+            <Entry   IsVisible="False"  Placeholder="Latitude" Text="" x:Name="la"/>
+            
 
 
             <Button Text="Create Match" 
                TextColor="White"
+                    Clicked="Button_Clicked"
                     BackgroundColor="#013ADF"/>
 
         </StackLayout>

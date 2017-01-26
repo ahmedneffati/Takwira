@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
+
 using System.Threading.Tasks;
+using Takwira.Models;
 using Takwira.RestClient;
 
 namespace Takwira.Services
@@ -14,7 +15,7 @@ namespace Takwira.Services
 
     {
 
-        RestClient<Match> restClient = new RestClient<Match>("http://takwira.azurewebsites.net/api/Matches/");
+        RestClient<Match> restClient = new RestClient<Match>("http://takwira.azurewebsites.net/api/Matchs/");
 
         public async Task<List<Match>> getMatchsAsync()
 

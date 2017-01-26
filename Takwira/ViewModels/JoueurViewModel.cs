@@ -47,7 +47,7 @@ namespace Takwira.ViewModels
 
                 return new Command(async () =>
                 {
-
+                   // if(_JoueursAdd.Email.Equals(""))
                     await u.PostJoueursAsync(_JoueursAdd);
                     //NavigationPage _navPage = new NavigationPage(new InscriptionJoueur());
                     // await _navPage.PushAsync(new AjouterTerrain());

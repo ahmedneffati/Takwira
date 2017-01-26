@@ -35,6 +35,12 @@
             <Image Source="p.jpg"
              HorizontalOptions="CenterAndExpand"
              VerticalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center">
+                <Button Text="Booking" Clicked="Button_Clicked_1"
+/>
+            </StackLayout>
             <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="Center"
                          VerticalOptions="Center"

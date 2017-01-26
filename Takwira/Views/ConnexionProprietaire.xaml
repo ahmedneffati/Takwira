@@ -1,28 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Takwira.Views.ConnexionProprietaire">
+             x:Class="Takwira.Views.ConnexionProprietaire"
+               Title="Connection"
+             
+             
+             >
     <ScrollView>
         <StackLayout Orientation="Vertical"
                   
-              
-                     
+                    
                  >
+
             <StackLayout HorizontalOptions="CenterAndExpand"
-                         VerticalOptions="CenterAndExpand" WidthRequest="200">
+                         VerticalOptions="CenterAndExpand" WidthRequest="200"
+                             Margin="30"
+                             >
+                <Label Text="Welcome to Find Match" FontSize="Large" TextColor="Black"/>
 
-                <Entry x:Name="email" Placeholder="Email" WidthRequest="200" />
+                <Entry x:Name="email" Placeholder="e_mail" WidthRequest="200" />
 
-                <Entry  x:Name="pass" Placeholder="Mot de passe" IsPassword="True" WidthRequest="200"/>
-                <Button Text="Connecter" 
-                        BackgroundColor="#013ADF"
+                <Entry  x:Name="pass" Placeholder="password" IsPassword="True" WidthRequest="200"/>
+                <Button Text="Log In" 
+                      BackgroundColor="#013ADF"
                         TextColor="White"
                     Clicked="Button_ClickedAsync"
+                       
                     />
-                <Button Text="Creer Un compte" 
-                          
-                    Clicked="Button_ClickedAsync2"
+                <Button Text="Create Account" 
+                        Clicked="Button_ClickedAsync2"  
+                    
+                    BackgroundColor="White" 
                     />
+                <Label Text="Recover Your Account" HorizontalOptions="Center"
+                       TextColor="Blue"/>
 
             </StackLayout>
 
