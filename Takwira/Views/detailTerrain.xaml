@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Takwira.Views.detailTerrain"  >
-        <!--  BackgroundImage="background.png"-->
-           
+             x:Class="Takwira.Views.detailTerrain" 
+             Title="Detail"
+		>
     <ScrollView>
         <StackLayout Orientation="Vertical"
                    Padding="20"
@@ -11,22 +11,15 @@
                      VerticalOptions="Center"
                      >
             <StackLayout Orientation="Horizontal">
-                <Label Text="Name of soccer field" FontSize="Large"/>
-                <Label Text="aaaaaaaaaaaa"  FontSize="Medium"/>
+                <Label Text="Name of soccer field: " />
+                <Label Text="Yasamin"  />
             </StackLayout>
             <StackLayout Orientation="Horizontal" >
-                <Label Text="Name of soccer field"/>
-                <Label Text="aaaaaaaaaaaa"/>
+                <Label Text="Description of soccer field: "/>
+                <Label Text="terrain Yasamin"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Name of soccer field"/>
-                <Label Text="aaaaaaaaaaaa"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Name of soccer field"/>
-                <Label Text="aaaaaaaaaaaa"/>
-                
-            </StackLayout>
+            <Label Text=""/>
+            <Label Text=""/>
             <Button Text="get directions"
                     BackgroundColor="#013ADF"
                     TextColor="White"
@@ -45,11 +38,32 @@
                          HorizontalOptions="Center"
                          VerticalOptions="Center"
                          Padding="20" Margin="20">
-                <Image Source="ic_textsms_black_24dp_2x.png" WidthRequest="70" HeightRequest="70"/>
-                <Image Source="ic_phone_black_24dp.png" WidthRequest="70" HeightRequest="70"/>
-                <Image Source="ic_email_3x.png" WidthRequest="70" HeightRequest="70"/>
+                <Image Source="ic_textsms_black_24dp_2x.png" WidthRequest="70" HeightRequest="70">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_Tapped"
+                            NumberOfTapsRequired="1"
+                            />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="ic_phone_black_24dp.png" WidthRequest="70" HeightRequest="70">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_Tapped1"
+                            NumberOfTapsRequired="1"
+                            />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="ic_email_3x.png" WidthRequest="70" HeightRequest="70">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_Tapped2"
+                            NumberOfTapsRequired="1"
+                            />
+                    </Image.GestureRecognizers>
+                </Image>
             </StackLayout>
         </StackLayout>
-  
+
     </ScrollView>
 </ContentPage>

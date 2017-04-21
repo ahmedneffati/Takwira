@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Takwira.Welcome"
+             Title="Welcome Page"
+		>
+
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label Text="Welcome to Find Soccer Field" FontSize="22" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+
+            <StackLayout HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand" WidthRequest="200">
+
+
+
+
+                <Button Text="Owner of soccer field" 
+                    Clicked="Button_ClickedAsync"
+                        BackgroundColor="#013ADF"
+                        TextColor="White"
+                         WidthRequest="200"
+                    />
+                <Button Text="Football player" 
+                        BackgroundColor="#013ADF"
+                        TextColor="White"
+                    Clicked="Button_ClickedAsync2"
+                         WidthRequest="200"
+                    />
+
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage> 

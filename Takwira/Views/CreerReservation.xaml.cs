@@ -14,6 +14,7 @@ namespace Takwira.Views
         HoraireServices u = new HoraireServices();
         ReservationServices r = new ReservationServices();
         List<Horaire> h;
+        string emailJoueur;
         public CreerReservation()
         {
             InitializeComponent();
@@ -21,11 +22,18 @@ namespace Takwira.Views
 
 
         }
+        public CreerReservation(string email)
+        {
+            InitializeComponent();
+            date_DateSelected(null, null);
+            emailJoueur = email;
+
+        }
 
         private async void date_DateSelected(object sender, DateChangedEventArgs e)
         {
-          h=  await u.getHorairesAsync();
-            foreach(var x in h)
+            h = await u.getHorairesAsync();
+            foreach (var x in h)
             {
                 picker.Items.Add(x.Intervalle);
             }
@@ -33,7 +41,7 @@ namespace Takwira.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            var answer = await DisplayAlert("confirm", "are you chore","yes", "no");
+            var answer = await DisplayAlert("confirm", "are you sure", "yes", "no");
             if (answer)
             {
                 Reservation reser = new Reservation();
@@ -44,7 +52,7 @@ namespace Takwira.Views
 
                 await r.PostReservationsAsync(reser);
             }
-            
+
 
         }
     }

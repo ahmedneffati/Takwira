@@ -2,5 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Takwira.Views.InformationTerrain">
-    
+    Title="Inscription"
+             >
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical"
+                 Spacing="18"
+                    Margin="20"
+                     >
+
+
+            <Entry  Placeholder="e-mail" x:Name="email"/>
+
+            <Entry   IsPassword="true" Placeholder="Password" x:Name="pass"/>
+            <Entry    Placeholder="Full Name" x:Name="full"/>
+            <Entry    Placeholder="Phone Number" x:Name="phoneN"/>
+            <Label Text="Birth date"/>
+
+            <DatePicker
+                x:Name="dateN"
+            MaximumDate="1/1/2015"
+            MinimumDate="1/1/1900"
+            >
+            </DatePicker>
+
+
+            <Button Text="Create" 
+                    x:Name="creer"
+                      BackgroundColor="#013ADF"
+                    TextColor="White"
+                    Clicked="creer_Clicked"
+                    
+                />
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

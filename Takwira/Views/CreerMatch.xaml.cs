@@ -12,8 +12,15 @@ namespace Takwira.Views
 {
     public partial class CreerMatch : ContentPage
     {
+        string emailJoueur;
         public CreerMatch()
         {
+            InitializeComponent();
+            positionAsync();
+        }
+        public CreerMatch(string email)
+        {
+            emailJoueur = email;
             InitializeComponent();
             positionAsync();
         }
@@ -33,7 +40,7 @@ namespace Takwira.Views
                 }
                 else
                 {
-                    await DisplayAlert("Erreur", "Ce Compte n'existe pas", "Ok");
+                    await DisplayAlert("Error", "activate the GPS", "Ok");
                 }
             }
             catch (Exception ex)
@@ -45,7 +52,6 @@ namespace Takwira.Views
               locat.DesiredAccuracy = 5000;
               var position = await locat.GetPositionAsync(1000000);
               a1.Text = position.Latitude.ToString();
-
                 lon.Text = position.Longitude.ToString();
                 */
         }
@@ -60,23 +66,23 @@ namespace Takwira.Views
             }
             else
             {
-              
+
                 j.Description = desc.Text;
                 j.NbDeJoueur = int.Parse(nb.Text);
                 j.Latitude = float.Parse(la.Text);
                 j.Longitude = float.Parse(lo.Text);
                 j.OrganisateurEmail = "aaa@aaa.aa";
-              
+
                 string ch = "";
                 //  2019 - 02 - 27T20: 20:20
-                ch =ch+ date.Date.Year+'-' + date.Date.Month+'-'+ date.Date.Day+'T'+ time.Time.Hours+':'+ time.Time.Minutes+':'+"00";
+                ch = ch + date.Date.Year + '-' + date.Date.Month + '-' + date.Date.Day + 'T' + time.Time.Hours + ':' + time.Time.Minutes + ':' + "00";
                 j.Date = DateTime.Parse(ch);
-               
-                 await u.PostMatchsAsync(j);
-                 await Navigation.PushAsync(new ConnexionJoueur());
+
+                await u.PostMatchsAsync(j);
+                await Navigation.PushAsync(new ConnexionJoueur());
             }
 
         }
-      
+
     }
 }

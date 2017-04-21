@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Takwira.Models;
 using Xamarin.Forms;
+using Plugin.Connectivity.Abstractions;
 
 namespace Takwira.Views
 {
@@ -15,9 +17,22 @@ namespace Takwira.Views
         public ConnexionProprietaire()
         {
             InitializeComponent();
+            //CrossConnectivity.Current.ConnectivityChanged += onChanged;
         }
+
+       /* private void onChanged(object sender, ConnectivityChangedEventArgs e)
+        {
+          new  ConnexionProprietaire();
+        }
+        */
+
         private async void Button_ClickedAsync(object sender, EventArgs e)
         {
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                await DisplayAlert("Error", "there is no Connection", "Ok");
+            }
+            else
             {
 
                 try
@@ -26,18 +41,17 @@ namespace Takwira.Views
                     string Url = string.Format("http://takwira.azurewebsites.net/api/Proprietaires/Connexion/" + email.Text.ToString() + "/" + pass.Text.ToString());
                     HttpClient client = new HttpClient();
                     string json = await client.GetStringAsync(Url);
-                    Proprietaire utilisateur = JsonConvert.DeserializeObject<Proprietaire>(json);
-
-
+                    if (json.Length > 20)
+                        email.Text = "";
+                    pass.Text = "";
                     await Navigation.PushAsync(new Menu());
 
                     // await Navigation.RemovePage(Connexion);
                 }
                 catch (Exception ex)
                 {
-                    await DisplayAlert("Erreur", "Ce Compte n'existe pas", "Ok");
+                    await DisplayAlert("Erreur", "Login or password is incorrect", "Ok");
                 }
-
 
 
 
@@ -49,5 +63,11 @@ namespace Takwira.Views
 
             await Navigation.PushAsync(new InscriptionProprietaire());
         }
+        private async void ButtRec(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new HelpAccount());
+        }
+
     }
 }

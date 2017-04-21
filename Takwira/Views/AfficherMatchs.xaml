@@ -3,15 +3,5 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=xamarin.Forms.Maps"
              x:Class="Takwira.Views.AfficherMatchs">
-    <ScrollView>
-        <StackLayout Orientation="Vertical">
-            <Button Text="get directions"
-                    BackgroundColor="#013ADF"
-                        TextColor="White"
-               
-                    Clicked="Button_Clicked"
-                    />
-            <maps:Map x:Name="map1"/>
-        </StackLayout>
-    </ScrollView>
+    <maps:Map x:Name="map1"/>
 </ContentPage>

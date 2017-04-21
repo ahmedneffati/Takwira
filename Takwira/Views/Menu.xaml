@@ -7,13 +7,11 @@
             <StackLayout Orientation="Vertical">
                 <Label Text=""/>
                 <Button Text="get soccer fields" Clicked="AllerListTerrainAsync"/>
-
                 <Button Text="Add soccer field" Clicked="AllerAjouterTerrain" />
-                <Button Text="reserver soccer field" Clicked="AllerReservation"/>
-                <Button Text="Create match" Clicked="AllerCreerMatch"/>
                 <Button Text="Log Out" Clicked="AllerConnexion"/>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
 
-    </MasterDetailPage>
+</MasterDetailPage>
+	

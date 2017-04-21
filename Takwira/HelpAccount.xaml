@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Takwira.HelpAccount"
+             	Title="Recover Account">
+
+    <StackLayout Orientation="Vertical" HorizontalOptions="Center"
+			Margin="22"
+                     VerticalOptions="Center">
+        <Label Text="Can not access your account?
+				Enter your e-mail address,      
+				we will help you" FontSize="22"/>
+        <Entry Placeholder="Email"/>
+        <Button Text="Send" Clicked="send"/>
+    </StackLayout>
+</ContentPage>

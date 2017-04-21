@@ -14,7 +14,7 @@ namespace Takwira.Views
         {
             InitializeComponent();
             IsPresented = true;
-
+            NavigationPage.SetHasNavigationBar(this, false);
             Detail = new NavigationPage(new AjouterTerrain());
         }
 
@@ -25,23 +25,18 @@ namespace Takwira.Views
             await four.InitializerDataASYNC();
             Detail = new NavigationPage(new AfficheTerrain(four));
 
-            // Detail = new NavigationPage(new AjouterTerrain());
+
         }
         public void AllerAjouterTerrain(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new AjouterTerrain());
         }
-        public void AllerReservation(object sender, EventArgs e)
+
+
+        public async void AllerConnexion(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new CreerReservation());
-        }
-        public void AllerCreerMatch(object sender, EventArgs e)
-        {
-            Detail = new NavigationPage(new CreerMatch());
-        }
-        public void AllerConnexion(object sender, EventArgs e)
-        {
-            Detail = new NavigationPage(new ConnexionJoueur());
+          
+            await Navigation.PushAsync(new Welcome());
         }
 
 

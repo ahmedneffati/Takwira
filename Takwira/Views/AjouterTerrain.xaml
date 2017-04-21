@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            
              x:Class="Takwira.Views.AjouterTerrain"
-             Title="Add soccer field"
+           	 Title="Add soccer field"
              >
-   
+
     <ScrollView>
         <StackLayout Orientation="Vertical"
                 Padding="20"
@@ -19,7 +19,7 @@
             <StackLayout 
                          HorizontalOptions="Center"
                          >
-        <!--<Button Text="Get Position from Maps" 
+                <!--<Button Text="Get Position from Maps" 
                     BackgroundColor="Gray"
                     
                     
@@ -31,7 +31,6 @@
                     
                     TextColor="White"
                 x:Name="pos" />
-
                 -->
                 <Image Source="add_btn.png"
                        x:Name="x"
@@ -50,11 +49,11 @@
                     TextColor="White"
                  Clicked="InsertFile"/>
             </StackLayout>
-            <Entry IsVisible="False" Placeholder="Longitude" x:Name="lon" />
+            <Entry IsVisible="False" Placeholder="Longitude" x:Name="lon" Text="30"/>
 
-            <Entry  IsVisible="False" Placeholder="Latitude" x:Name="lat"/>
+            <Entry  IsVisible="False" Placeholder="Latitude" x:Name="lat" Text="10"/>
 
-            
+
 
 
 

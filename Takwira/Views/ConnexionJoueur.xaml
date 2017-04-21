@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Takwira.Views.ConnexionJoueur"
-             Title="Connection"
-             
+              Title="Connection"
              
              >
     <ScrollView>
@@ -11,12 +10,17 @@
                   
                     
                  >
-                
-                <StackLayout HorizontalOptions="CenterAndExpand"
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label Text="Welcome to Find Soccer Field" FontSize="22" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+
+
+            <StackLayout HorizontalOptions="CenterAndExpand"
                          VerticalOptions="CenterAndExpand" WidthRequest="200"
                              Margin="30"
                              >
-                <Label Text="Welcome to Find Match" FontSize="Large" TextColor="Black"/>
+
 
                 <Entry x:Name="email" Placeholder="e_mail" WidthRequest="200" />
 
@@ -32,8 +36,10 @@
                     
                     BackgroundColor="White" 
                     />
-                <Label Text="Recover Your Account" HorizontalOptions="Center"
-                       TextColor="Blue"/>
+                <Button Text="Recover Your Account" HorizontalOptions="Center"
+                       TextColor="Blue"
+                       Clicked="ButtRec"
+					/>
 
             </StackLayout>
 

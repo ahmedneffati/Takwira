@@ -8,8 +8,7 @@
                 <Label Text=""/>
                 <Button Text="get soccer fields" Clicked="AllerListTerrainAsync"/>
 
-                <Button Text="Add soccer field" Clicked="AllerAjouterTerrain" />
-                <Button Text="reserver soccer field" Clicked="AllerReservation"/>
+                <Button Text="Book soccer field" Clicked="AllerReservation"/>
                 <Button Text="Create match" Clicked="AllerCreerMatch"/>
                 <Button Text="Log Out" Clicked="AllerCreerMatch"/>
             </StackLayout>

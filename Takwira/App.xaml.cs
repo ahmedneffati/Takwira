@@ -13,7 +13,7 @@ namespace Takwira
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new CreerReservation());
+            MainPage = new NavigationPage(new Welcome());
 
            // MainPage =new Takwira.Views.Menu();
         }
