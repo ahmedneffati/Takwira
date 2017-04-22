@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Takwira.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -15,14 +15,19 @@ namespace Takwira.Views
     public partial class detailTerrain : ContentPage
     {
         private Pin s;
+        private Terrain t;
         public detailTerrain()
         {
             InitializeComponent();
         }
-        public detailTerrain(Pin s)
+        public detailTerrain(Pin s , Terrain t)
         {
             InitializeComponent();
             this.s = s;
+            this.t = t;
+            
+            
+
         }
         private void Button_Clicked(object sender, System.EventArgs e)
         {
@@ -35,6 +40,7 @@ namespace Takwira.Views
         }
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
+            
             var sms = CrossMessaging.Current.SmsMessenger;
             if (sms.CanSendSms)
                 sms.SendSms("+21622222222", "well hello there");
@@ -56,12 +62,12 @@ namespace Takwira.Views
             if (emailTask.CanSendEmail)
             {
                 // Send simple e-mail to single receiver without attachments, CC, or BCC.
-                emailTask.SendEmail("plugins@xamarin.com", "Xamarin Messaging Plugin", "Hello from your friends at Xamarin!");
+                emailTask.SendEmail(t.EmailProp, "Xamarin Messaging Plugin", "Hello from your friends at Xamarin!");
 
                 // Send a more complex email with the EmailMessageBuilder fluent interface.
                 var email = new EmailMessageBuilder()
                   .To("plugins@xamarin.com")
-                  .Cc("plugins.cc@xamarin.com")
+                  .Cc(t.EmailProp)
                   .Bcc(new[] { "plugins.bcc@xamarin.com", "plugins.bcc2@xamarin.com" })
                   .Subject("Xamarin Messaging Plugin")
                   .Body("Hello from your friends at Xamarin!")

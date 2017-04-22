@@ -12,19 +12,24 @@
                      >
             <StackLayout Orientation="Horizontal">
                 <Label Text="Name of soccer field: " />
-                <Label Text="Yasamin"  />
+                <Label Text="Yasamin" x:Name="nom" />
             </StackLayout>
             <StackLayout Orientation="Horizontal" >
                 <Label Text="Description of soccer field: "/>
-                <Label Text="terrain Yasamin"/>
+                <Label Text="terrain Yasamin" x:Name="desc"/>
             </StackLayout>
-            <Label Text=""/>
-            <Label Text=""/>
+           
             <Button Text="get directions"
                     BackgroundColor="#013ADF"
                     TextColor="White"
+                    Margin="0, 40, 0, 0"
                     Clicked="Button_Clicked"
                     />
+            <Image Source="add_btn.png"
+                       x:Name="image"
+                       WidthRequest="400"
+                       HeightRequest="220"
+                       >
             <Image Source="p.jpg"
              HorizontalOptions="CenterAndExpand"
              VerticalOptions="CenterAndExpand"/>

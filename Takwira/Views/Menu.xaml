@@ -5,8 +5,8 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
             <StackLayout Orientation="Vertical">
-                <Label Text=""/>
-                <Button Text="get soccer fields" Clicked="AllerListTerrainAsync"/>
+
+                <Button Text="get soccer fields" Clicked="AllerListTerrainAsync" Margin="0, 20, 0, 0"/>
                 <Button Text="Add soccer field" Clicked="AllerAjouterTerrain" />
                 <Button Text="Log Out" Clicked="AllerConnexion"/>
             </StackLayout>

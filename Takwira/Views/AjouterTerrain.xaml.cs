@@ -93,7 +93,7 @@ namespace Takwira.Views
                     });
                     if (_mediaFile == null)
                         return;
-                    await DisplayAlert("good", _mediaFile.Path, "Ok");
+                  //  await DisplayAlert("good", _mediaFile.Path, "Ok");
                     x.Source = ImageSource.FromStream(() =>
                     {
                         return _mediaFile.GetStream();

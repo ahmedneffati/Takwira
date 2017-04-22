@@ -13,6 +13,9 @@ namespace Takwira
         public Welcome()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+           
+
         }
         private async void Button_ClickedAsync2(object sender, EventArgs e)
         {

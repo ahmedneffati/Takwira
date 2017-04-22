@@ -3,15 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Takwira.Welcome"
              Title="Welcome Page"
+            
+              
 		>
 
 
     <ScrollView>
         <StackLayout Orientation="Vertical">
-            <Label/>
-            <Label/>
-            <Label/>
-            <Label Text="Welcome to Find Soccer Field" FontSize="22" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+            
+            <Label Text="Welcome to Find Soccer Field" FontSize="22" Margin="0, 60, 0, 0" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
 
             <StackLayout HorizontalOptions="CenterAndExpand"
                          VerticalOptions="CenterAndExpand" WidthRequest="200">

@@ -5,12 +5,12 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
             <StackLayout Orientation="Vertical">
-                <Label Text=""/>
-                <Button Text="get soccer fields" Clicked="AllerListTerrainAsync"/>
+
+                <Button Text="get soccer fields" Clicked="AllerListTerrainAsync" Margin="0, 20, 0, 0"/>
 
                 <Button Text="Book soccer field" Clicked="AllerReservation"/>
                 <Button Text="Create match" Clicked="AllerCreerMatch"/>
-                <Button Text="Log Out" Clicked="AllerCreerMatch"/>
+                <Button Text="Log Out" Clicked="AllerConnexion"/>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
