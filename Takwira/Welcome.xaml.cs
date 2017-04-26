@@ -14,13 +14,32 @@ namespace Takwira
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-           
+            session();
+
 
         }
         private async void Button_ClickedAsync2(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ConnexionJoueur());
 
+        }
+        private async void session()
+        {
+            if (MySharedPreferences.email != null)
+
+            {
+                if (!MySharedPreferences.email.Equals(""))
+                {
+                    if (MySharedPreferences.type.Equals("J"))
+                    {
+                        await Navigation.PushAsync(new MenuJoueur());
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(new Menu());
+                    }
+                }
+            }
         }
         private async void Button_ClickedAsync(object sender, EventArgs e)
         {

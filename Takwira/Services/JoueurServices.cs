@@ -40,6 +40,34 @@ namespace Takwira.Services
 
         }
 
+        public async Task<Joueur> getJoueurAsync(string email)
+
+        {
+
+
+
+            var Joueur = await restClient.GetAsync(email);
+
+            return Joueur;
+
+
+
+        }
+        public async Task<Joueur> getJoueurAsync(string email, string pass)
+
+        {
+
+
+
+            var Proprietaire = await restClient.GetConnexionJoueurAsync(email, pass);
+
+            return Proprietaire;
+
+
+
+        }
+
+
     }
 
 }

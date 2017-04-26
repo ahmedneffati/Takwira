@@ -46,11 +46,12 @@ namespace Takwira.Views
             {
                 Reservation reser = new Reservation();
                 reser.Date = date.Date;
-                reser.EmailJoueur = "";
+                reser.EmailJoueur = MySharedPreferences.email;
                 // reser.HoraireId = picker.SelectedIndex;
                 //reser.IdTerrain = 11;
 
                 await r.PostReservationsAsync(reser);
+
             }
 
 

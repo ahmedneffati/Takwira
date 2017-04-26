@@ -13,7 +13,7 @@ namespace Takwira.Services
 
     {
 
-        RestClientString<Proprietaire> restClient = new RestClientString<Proprietaire>("http://takwira.azurewebsites.net/api/Proprietaires");
+        RestClientString<Proprietaire> restClient = new RestClientString<Proprietaire>("http://takwira.azurewebsites.net/api/proprietaires");
 
         public async Task<List<Proprietaire>> getProprietairesAsync()
 
@@ -28,8 +28,32 @@ namespace Takwira.Services
 
 
         }
+        public async Task<Proprietaire> getProprietaireAsync( string email)
+
+        {
 
 
+
+            var Proprietaire = await restClient.GetAsync(email);
+
+            return Proprietaire;
+
+
+
+        }
+        public async Task<Proprietaire> getProprietaireAsync(string email,string pass)
+
+        {
+
+
+
+            var Proprietaire = await restClient.GetConnexionAsync(email,pass);
+
+            return Proprietaire;
+
+
+
+        }
 
 
 

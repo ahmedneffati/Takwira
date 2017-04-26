@@ -66,5 +66,39 @@ namespace Takwira.RestClient
 
             return response.IsSuccessStatusCode;
         }
+
+        public async Task<T> GetAsync(string id)
+        {
+            var httpClient = new HttpClient();
+
+            var json = await httpClient.GetStringAsync(WebServiceUrl + "/" + id);
+
+            var user = JsonConvert.DeserializeObject<T>(json);
+
+            return user;
+        }
+        public async Task<T> GetConnexionAsync(string email, string pass)
+        {
+            var httpClient = new HttpClient();
+
+            var json = await httpClient.GetStringAsync("http://takwira.azurewebsites.net/api/Proprietaires/Connexion/"  + email + "/"+ pass);
+
+            
+            var user = JsonConvert.DeserializeObject<T>(json);
+         
+            return user;
+        }
+        public async Task<T> GetConnexionJoueurAsync(string email, string pass)
+        {
+            var httpClient = new HttpClient();
+
+            var json = await httpClient.GetStringAsync("http://takwira.azurewebsites.net/api/Joueurs/Connexion/" + email + "/" + pass);
+
+
+            var user = JsonConvert.DeserializeObject<T>(json);
+
+            return user;
+        }
+        
     }
 }

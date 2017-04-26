@@ -38,9 +38,11 @@ namespace Takwira.Views
 
         }
 
-        public void AllerReservation(object sender, EventArgs e)
+        public async void AllerMatchs(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new CreerReservation(emailJoueur));
+            var four = new MatchViewModel();
+            await four.InitializerDataASYNC();
+            Detail = new NavigationPage(new AfficherMatchs(four));
         }
         public void AllerCreerMatch(object sender, EventArgs e)
         {
@@ -48,7 +50,9 @@ namespace Takwira.Views
         }
         public async void AllerConnexion(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Welcome()); 
+            MySharedPreferences.email = "";
+            await Navigation.PushAsync(new Welcome());
+            
         }
 
 

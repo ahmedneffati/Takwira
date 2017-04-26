@@ -42,6 +42,7 @@
       <DependentUpon>HelpAccount.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\MatchServices.cs" />
+    <Compile Include="ViewModels\MatchViewModel.cs" />
     <Compile Include="Views\AfficherMatchs.xaml.cs">
       <DependentUpon>AfficherMatchs.xaml</DependentUpon>
     </Compile>
@@ -68,6 +69,9 @@
     </Compile>
     <Compile Include="Views\CreerReservation.xaml.cs">
       <DependentUpon>CreerReservation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\detailMatch.xaml.cs">
+      <DependentUpon>detailMatch.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\detailTerrain.xaml.cs">
       <DependentUpon>detailTerrain.xaml</DependentUpon>
@@ -113,6 +117,7 @@
     <Compile Include="Views\MenuJoueur.xaml.cs">
       <DependentUpon>MenuJoueur.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MySharedPreferences.cs" />
     <Compile Include="Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
@@ -297,6 +302,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Welcome.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\detailMatch.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

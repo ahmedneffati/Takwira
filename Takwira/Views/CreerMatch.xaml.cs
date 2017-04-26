@@ -40,7 +40,7 @@ namespace Takwira.Views
                 }
                 else
                 {
-                    await DisplayAlert("Error", "activate the GPS", "Ok");
+                    await DisplayAlert("Error", "activate the GPS "+ MySharedPreferences.email+"hhh", "Ok");
                 }
             }
             catch (Exception ex)
@@ -79,7 +79,7 @@ namespace Takwira.Views
                 j.Date = DateTime.Parse(ch);
 
                 await u.PostMatchsAsync(j);
-                await Navigation.PushAsync(new ConnexionJoueur());
+                await Navigation.PushAsync(new AfficherMatchs());
             }
 
         }

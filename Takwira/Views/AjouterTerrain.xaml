@@ -49,9 +49,9 @@
                     TextColor="White"
                  Clicked="InsertFile"/>
             </StackLayout>
-            <Entry IsVisible="False" Placeholder="Longitude" x:Name="lon" Text="30"/>
+            <Entry IsVisible="False" Placeholder="Longitude" x:Name="lon" Text="10,2090"/>
 
-            <Entry  IsVisible="False" Placeholder="Latitude" x:Name="lat" Text="10"/>
+            <Entry  IsVisible="False" Placeholder="Latitude" x:Name="lat" Text="30,8553"/>
 
 
 

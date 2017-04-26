@@ -27,8 +27,8 @@
             <Entry  Placeholder="Description" x:Name="desc" Text=""/>
 
 
-            <Entry   IsVisible="False" Placeholder="Longitude" Text="" x:Name="lo"/>
-            <Entry   IsVisible="False"  Placeholder="Latitude" Text="" x:Name="la"/>
+            <Entry   IsVisible="False" Placeholder="Longitude" Text="10,2090" x:Name="lo"/>
+            <Entry   IsVisible="False"  Placeholder="Latitude" Text="30,8553" x:Name="la"/>
 
 
 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Takwira.Models;
 using Xamarin.Forms;
 using Plugin.Connectivity.Abstractions;
+using Takwira.Services;
 
 namespace Takwira.Views
 {
@@ -38,12 +39,19 @@ namespace Takwira.Views
                 try
                 {
                     //http://takwira.azurewebsites.net/api/Joueurs/Connexion/azdadz/huuih
-                    string Url = string.Format("http://takwira.azurewebsites.net/api/Proprietaires/Connexion/" + email.Text.ToString() + "/" + pass.Text.ToString());
-                    HttpClient client = new HttpClient();
-                    string json = await client.GetStringAsync(Url);
-                    if (json.Length > 20)
-                        email.Text = "";
+                   // string Url = string.Format("http://takwira.azurewebsites.net/api/Proprietaires/Connexion/" + email.Text.ToString() + "/" + pass.Text.ToString());
+                    //HttpClient client = new HttpClient();
+                    Proprietaire j;
+                    ProprietaireServices u = new ProprietaireServices();
+                    j = new Proprietaire();
+                    j = await u.getProprietaireAsync(email.Text,pass.Text);
+                   // string json = await client.GetStringAsync(Url);
+                   // if (json.Length > 20)
+                        MySharedPreferences.email = email.Text;
+                    MySharedPreferences.type = "P";
+                    email.Text = "";
                     pass.Text = "";
+                    
                     await Navigation.PushAsync(new Menu());
 
                     // await Navigation.RemovePage(Connexion);

@@ -194,11 +194,11 @@
     <AndroidResource Include="Resources\drawable\add.png" />
     <AndroidResource Include="Resources\drawable\add_btn.png" />
     <AndroidResource Include="Resources\drawable\background.png" />
+    <AndroidResource Include="Resources\drawable\ic_email_3x.png" />
     <Content Include="Resources\drawable\Football.png" />
     <AndroidResource Include="Resources\drawable\icsms.png" />
     <AndroidResource Include="Resources\drawable\icemail.png" />
     <AndroidResource Include="Resources\drawable\icphone.png" />
-    <AndroidResource Include="Resources\drawable\ic_email_3x.png" />
     <AndroidResource Include="Resources\drawable\ic_phone_black_24dp.png" />
     <AndroidResource Include="Resources\drawable\ic_textsms_black_24dp_2x.png" />
   </ItemGroup>

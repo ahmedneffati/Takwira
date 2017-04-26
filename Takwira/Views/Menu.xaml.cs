@@ -35,7 +35,7 @@ namespace Takwira.Views
 
         public async void AllerConnexion(object sender, EventArgs e)
         {
-          
+            MySharedPreferences.email = "";
             await Navigation.PushAsync(new Welcome());
         }
 

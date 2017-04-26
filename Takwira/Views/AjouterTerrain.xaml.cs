@@ -36,6 +36,7 @@ namespace Takwira.Views
                         positions.ToString();
                         lat.Text = positions.Latitude.ToString();
                         lon.Text = positions.Longitude.ToString();
+                    
                     }
                     else
                     {
@@ -109,7 +110,9 @@ namespace Takwira.Views
                    "\"file\"", $"\"{_mediaFile.Path}\"");
                 //http://takwira.azurewebsites.net/uploads/image_.jpg
                 var httpclient = new HttpClient();
-                string name = "xxx" + lon.Text.ToString();
+            Random rnd = new Random();
+            int randomv = rnd.Next(1, 22222);
+            string name = "xxx" + lon.Text.ToString()+ randomv;
                 var up = "http://takwira.azurewebsites.net/file/uploads/" + name + "/";
                 var httpRM = await httpclient.PostAsync(up, content);
                 //  path.Text = "http://takwira.azurewebsites.net/uploads/image_"+name+".jpg";
@@ -117,15 +120,17 @@ namespace Takwira.Views
                 Terrain t = new Terrain();
                 t.Description = desc.Text.ToString();
                 t.Nom = nom.Text.ToString();
+            t.EmailProp = MySharedPreferences.email;
                 float xx;
                 t.Latitude = float.Parse(lat.Text.ToString());
                 t.Longitude = float.Parse(lon.Text.ToString());
                 t.PathImage = "http://takwira.azurewebsites.net/uploads/image_" + name + ".jpg";
 
                 await u.PostTerrainsAsync(t);
-                //https://takwira.scm.azurewebsites.net/DebugConsole   bech inverifi
+            //https://takwira.scm.azurewebsites.net/DebugConsole   bech inverifi
+            await DisplayAlert("good ", ":) add with success", "OK"); 
 
-            }
+        }
 
         }
     }

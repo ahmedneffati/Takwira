@@ -70,5 +70,6 @@ namespace Takwira.RestClient
 
             return response.IsSuccessStatusCode;
         }
+
     }
 }
